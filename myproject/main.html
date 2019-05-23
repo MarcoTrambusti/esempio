@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MarconiAPP</title>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and
+media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page
+via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/
+html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/
+respond.min.js"></script>
+<![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual
+files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body style="background-color: lightblue">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a onclick="showHome()" class="navbar-brand" href="#">MarconiAPP</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                    <li class="nav-item ">
+                            <a onclick="showClass()" class="nav-link" href="#">Classi</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a onclick="showTeacher()" class="nav-link" href="#">Docenti</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a onclick="showStudent()" class="nav-link" href="#">Studenti</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a onclick="showSession()" class="nav-link" href="#">Sessione</a>
+                        </li>
+                        <form class="form-inline my-2 my-lg-0">
+                            <button class="btn btn-primary pull-right" type="submit">Accedi</button>
+                        </form>
+            </ul>
+        </div>
+
+    </nav>
+
+
+
+    <!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a onclick="showHome()" class="navbar-brand" href="#">MarconiAPP</a>
+                <ul class="navbar-nav mr-auto">
+                    </li>
+                    <li class="nav-item ">
+                        <a onclick="showClass()" class="nav-link" href="#">Classi</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a onclick="showTeacher()" class="nav-link" href="#">Docenti</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a onclick="showStudent()" class="nav-link" href="#">Studenti</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a onclick="showSession()" class="nav-link" href="#">Sessione</a>
+                    </li>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-primary pull-right" type="submit">Accedi</button>
+                    </form>
+                </ul>
+            </div>
+        </nav>-->
+        <div class="container" id="head" style="margin:100px;display: none;">
+            <h1>Benvenuto!</h1>
+        </div>
+        <div class="container rounded" id="body" style="width:800px; margin:100px auto; ; display: none">
+            <div id="table-form">
+                <div class="table" id="table" style="background-color:lightgrey; border-radius: 4px;">
+
+
+                    <tbody id="tbody"></tbody>
+                    </table>
+
+                </div>
+                <button class="btn" id="addBtn" style="border-radius: 100%" onclick="showAdd()">+</button>
+            </div>
+            <div id="addForm" style="display: none">
+                <label>nome:</label>
+                <input type="text" class="form-control" id="nome" required autofocus>
+                <label>cognome:</label>
+                <input type="text" class="form-control" id="cognome" required autofocus>
+                <label>username:</label>
+                <input type="text" class="form-control" id="username" required autofocus>
+                <label>password:</label>
+                <input type="password" class="form-control" id="password" required autofocus>
+                <label>idClasse:</label>
+                <input type="text" class="form-control" id="idClass" required>
+                <button class="btn" id="addBtn" style="border-radius: 30px" type="submit"
+                    onclick="addStudente()">conferma</button>
+            </div>
+            <div id="modForm" style="display: none">
+                <label>idStudente: </label><label id=mId></label><br>
+                <label>nome:</label>
+                <input type="text" class="form-control" id="mNome" required autofocus>
+                <label>cognome:</label>
+                <input type="text" class="form-control" id="mCognome" required autofocus>
+                <label>username:</label>
+                <input type="text" class="form-control" id="mUsername" required autofocus>
+                <label>password:</label>
+                <input type="password" class="form-control" id="mPassword" required autofocus>
+                <label>idClasse:</label>
+                <input type="text" class="form-control" id="mIdClass" required>
+                <button class="btn" id="modBtn" style="border-radius: 30px" type="submit"
+                    onclick="modStudente()">conferma</button>
+            </div>
+        </div>
+
+</body>
+
+</html>
