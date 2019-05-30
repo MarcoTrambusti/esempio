@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="script.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual
+files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<select id="select" onchange="filtArticle()">
+</select>
+<table class="table" id="table">
+    <thead>
+        <td>Articolo</td>
+        <td>prezzo</td>
+        <td>sport</td>
+        <td>azioni</td>
+    </thead>
+    <tbody id="body"></tbody>
+</table>
+<div class="container" id="addForm" style="display: none">
+  <input type="text" id="nome">
+  <input type="number" id="prezzo">
+  <input type="number" id="idSport">
+  <button class="btn" id="conferma">conferma</button>
+</div>
+<button  class="btn" style="border-radius: 100%" id="add" onclick="showAdd()">+</button>
+
+</div>
+</body>
+</html>
